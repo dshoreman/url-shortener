@@ -19,6 +19,6 @@ class Url extends Model
     {
         $query = $query->where('short_url', $short_url);
 
-        return $query->first();
+        return $query->firstOrFail();
     }
 }

@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('u/{url}', 'UrlController@redirect');
+
 Route::resource('urls', 'UrlController')->only(['store', 'delete']);
